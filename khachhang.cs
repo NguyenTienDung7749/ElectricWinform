@@ -43,5 +43,30 @@ namespace WaterBillWinformTest
         {
             return this.SoTienPhaiTra;
         }
+
+        public string getHoVaTen()
+        {
+            return this.HoVaTen;
+        }
+
+        public int getSoDienThangTruoc()
+        {
+            return this.SoDienThangTruoc;
+        }
+
+        public int getSoDienThangNay()
+        {
+            return this.SoDienThangNay;
+        }
+
+        public string getLoaiKhachHang()
+        {
+            return this.LoaiKhachHang;
+        }
+
+        public string getCCCD()
+        {
+            return this.CCCD;
+        }     
     }
 }

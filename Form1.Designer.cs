@@ -40,7 +40,13 @@
             label5 = new Label();
             cbbcustomer = new ComboBox();
             label6 = new Label();
-            listView1 = new ListView();
+            lvDSKH = new ListView();
+            colHoVaTen = new ColumnHeader();
+            colCCCD = new ColumnHeader();
+            colLoaiKH = new ColumnHeader();
+            colLast = new ColumnHeader();
+            colThis = new ColumnHeader();
+            colHoaDon = new ColumnHeader();
             btncaculator = new Button();
             btnsave = new Button();
             tbbill = new TextBox();
@@ -145,13 +151,53 @@
             label6.TabIndex = 11;
             label6.Text = "Loai Khach Hang";
             // 
-            // listView1
+            // lvDSKH
             // 
-            listView1.Location = new Point(420, 12);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(655, 494);
-            listView1.TabIndex = 12;
-            listView1.UseCompatibleStateImageBehavior = false;
+            lvDSKH.Columns.AddRange(new ColumnHeader[] { colHoVaTen, colCCCD, colLoaiKH, colLast, colThis, colHoaDon });
+            lvDSKH.FullRowSelect = true;
+            lvDSKH.GridLines = true;
+            lvDSKH.ImeMode = ImeMode.Off;
+            lvDSKH.Location = new Point(420, 12);
+            lvDSKH.Name = "lvDSKH";
+            lvDSKH.Size = new Size(728, 494);
+            lvDSKH.TabIndex = 12;
+            lvDSKH.UseCompatibleStateImageBehavior = false;
+            lvDSKH.View = View.Details;
+            // 
+            // colHoVaTen
+            // 
+            colHoVaTen.Text = "Ho Va Ten";
+            colHoVaTen.Width = 120;
+            // 
+            // colCCCD
+            // 
+            colCCCD.Text = "CCCD";
+            colCCCD.TextAlign = HorizontalAlignment.Center;
+            colCCCD.Width = 120;
+            // 
+            // colLoaiKH
+            // 
+            colLoaiKH.Text = "Loai Khach Hang";
+            colLoaiKH.TextAlign = HorizontalAlignment.Center;
+            colLoaiKH.Width = 120;
+            // 
+            // colLast
+            // 
+            colLast.Text = "So Dien Thang Truoc";
+            colLast.TextAlign = HorizontalAlignment.Center;
+            colLast.Width = 120;
+            // 
+            // colThis
+            // 
+            colThis.Text = "So Dien Thang Nay";
+            colThis.TextAlign = HorizontalAlignment.Center;
+            colThis.Width = 120;
+            // 
+            // colHoaDon
+            // 
+            colHoaDon.Text = "Hoa Don Tien Nuoc";
+            colHoaDon.TextAlign = HorizontalAlignment.Center;
+            colHoaDon.Width = 120;
             // 
             // btncaculator
             // 
@@ -193,12 +239,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1088, 524);
+            ClientSize = new Size(1158, 524);
             Controls.Add(label7);
             Controls.Add(tbbill);
             Controls.Add(btnsave);
             Controls.Add(btncaculator);
-            Controls.Add(listView1);
+            Controls.Add(lvDSKH);
             Controls.Add(label6);
             Controls.Add(cbbcustomer);
             Controls.Add(label5);
@@ -231,10 +277,16 @@
         private Label label5;
         private ComboBox cbbcustomer;
         private Label label6;
-        private ListView listView1;
+        private ListView lvDSKH;
         private Button btncaculator;
         private Button btnsave;
         private TextBox tbbill;
         private Label label7;
+        private ColumnHeader colHoVaTen;
+        private ColumnHeader colCCCD;
+        private ColumnHeader colLoaiKH;
+        private ColumnHeader colLast;
+        private ColumnHeader colThis;
+        private ColumnHeader colHoaDon;
     }
 }

@@ -21,6 +21,25 @@ namespace WaterBillWinformTest
             KhachHang kh = new KhachHang(TenKhachHang, CCCD, LoaiKhachHang, SoDienThangTruoc, SoDienThangNay);
             int SoTienPhaiTra = kh.getSoTienPhaiTra();
             tbbill.Text = SoTienPhaiTra.ToString();
+            DanhSachKhachHang[SoLuongKhachHang] = kh;
+            SoLuongKhachHang++;
+            displayDanhSachKhachHang();
+        }
+
+        private void displayDanhSachKhachHang()
+        {
+            lvDSKH.Items.Clear();
+            for (int i = 0; i < SoLuongKhachHang; i++)
+            {
+                ListViewItem row = new ListViewItem(DanhSachKhachHang[i].getHoVaTen());
+                row.SubItems.Add(DanhSachKhachHang[i].getCCCD());
+                row.SubItems.Add(DanhSachKhachHang[i].getLoaiKhachHang());
+                row.SubItems.Add(DanhSachKhachHang[i].getSoDienThangTruoc().ToString());
+                row.SubItems.Add(DanhSachKhachHang[i].getSoDienThangNay().ToString());
+                row.SubItems.Add(DanhSachKhachHang[i].getSoTienPhaiTra().ToString());
+
+                lvDSKH.Items.Add(row);
+            }
         }
     }
 }
